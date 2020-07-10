@@ -1,0 +1,40 @@
+<div class="gs">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                    <ul> 
+                        <li *ngFor="let d2 of arrdata2">
+                                <img class="si" src="data:image/jpeg;base64,{{d2.Simage}}"><br>
+                            <h3 class="he3">{{d2.Type}}</h3>
+                            <h4 style="font-style:italic; justify-content: center ;text-align: center">{{d2.Info}} </h4>                      
+                        </li>
+                    </ul>
+            </div> 
+            <div class="col-6">
+            <ul> 
+                <li *ngFor="let d1 of arrdata1">
+                        <mat-card tab-index="0" class="p">
+                                <mat-card-content style="overflow-y:auto">
+                                <div class="row">
+                                    <div class="col-6">
+                                       <h3 style="font-weight: bold;font-style:italic; margin-top: 15px;"> {{d1.Name}}</h3>
+                                       <h4 style="font-style:italic; font-weight: bold">{{d1.Speciality}}</h4>
+                                       <h4 style="font-weight: bold ; font-style:italic">Experience : {{d1.Experience}} years</h4>
+                                       <h4 style="font-weight: bold ; font-style:italic">Next Available at : {{d1.Availability}}</h4><br>
+                                    </div>  
+                                    <div class="col-6">
+                                       <img class="di" src="data:image/jpeg;base64,{{d1.Image}}">
+                                    </div>
+                                </div>   
+                                       <h4 class="dii">{{d1.About}}</h4>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                        <button class="w1" mat-button (click)="appoint()">Appointment</button>
+                                </mat-card-actions>
+                        </mat-card> 
+                </li>
+            </ul>
+            </div>
+        </div>    
+    </div>    
+</div>

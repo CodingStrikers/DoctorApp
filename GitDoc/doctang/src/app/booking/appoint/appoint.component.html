@@ -1,0 +1,39 @@
+<div class="app">
+    <div class="row">
+       <div class="col-md-12" style="text-align: center; font-family:'Times New Roman', Times, serif; font-weight: bolder; margin-top:30px; font-size: 30px; margin-left:-123px">
+          BOOK YOUR APPOINTMENT
+       </div>
+    </div>
+    <div class="row">
+       <div class="col-md-6 c1">
+          <mat-form-field class="example-full-width a11">
+             <mat-label>Appointment-Date</mat-label>
+             <input matInput [matDatepicker]="picker" [min]="todayDate" [formControl]="dates">
+             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+             <mat-datepicker touchUi #picker></mat-datepicker>
+          </mat-form-field>
+          <br>
+          <input type="text"
+          placeholder="Select Time Slot"
+          [formControl]="timetyp"
+          [matAutocomplete]="auto"
+          class="a12">
+          <mat-autocomplete #auto="matAutocomplete">
+             <mat-option *ngFor="let t of filteredTime  | async" [value]="t">
+             {{t}}
+             </mat-option>
+          </mat-autocomplete>
+          <br>
+          <mat-label class="a13">Reason For The Appointment </mat-label>
+          <textarea [formControl]="txtar" class="a14" matInput placeholder="Ex. Describe the ailment ..."></textarea>
+       </div>
+       <div class ="col-md-6 c2">
+          <img src="../../../assets/a1.jpg">
+       </div>
+    </div>
+    <div class="row justify-content-center">
+       <div class="col-md-12">  
+          <button class="w1" mat-button (click)="Pay()">PROCEED TO PAY</button>
+       </div>
+    </div>
+ </div>

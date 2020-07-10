@@ -1,0 +1,101 @@
+<div class="det">
+    <div class="container-fluid">
+       <div class="row">
+          <div class="col-md-5">
+             <ul>
+                <li *ngFor="let d of detail">
+                   <div class="row">
+                      <div class="col-md-4">
+                         <img src="data:image/jpeg;base64,{{d.Image}}">
+                      </div>
+                      <div class="col-md-8 justify-content-centre c2">
+                         {{d.Name}}<br>
+                         {{d.Speciality}}<br>
+                      </div>
+                   </div>
+                   <br>
+                   <div class="row">
+                      <form [formGroup]="editpro">
+                         <mat-form-field class="example-full-width">
+                            <textarea matInput placeholder="Address" value={{d.Address}} formControlName="add"></textarea>
+                         </mat-form-field>
+                         <mat-form-field class="example-full-width">
+                            <input disabled matInput placeholder="Email-ID" value={{d.Email}} formControlName="ema">
+                         </mat-form-field>
+                         <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Password" value={{d.Password}} formControlName="pas">
+                         </mat-form-field>
+                         <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Locality" value={{d.Locality}} formControlName="loc">
+                         </mat-form-field>
+                         <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Experience" value={{d.Experience}} formControlName="exp">
+                         </mat-form-field>
+                         <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Availability" value={{d.Availability}} formControlName="ava">
+                         </mat-form-field>
+                         <mat-form-field class="example-full-width">
+                            <textarea matInput placeholder="About" value={{d.About}} formControlName="abo"></textarea>
+                         </mat-form-field>
+                         <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Fees" value={{d.Fees}}  formControlName="fee">
+                         </mat-form-field>
+                         <button class="w3" style="position:relative" (click)="edprof()">Edit Details</button>
+                         <button class="w2" style="position:relative" (click)="myForm()">Save Changes</button>
+                      </form>
+                   </div>
+                </li>
+             </ul>
+          </div>
+          <div class="col-md-7">
+             <div class="row">
+                <div class="col-md-12">
+                   <ul>
+                      <li *ngFor="let d of detail">
+                         <div class="row g">
+                            <div class="col-md-3 cases">
+                               <h2 style="font-size:50px ; margin-top:3px">{{d.Cases}}</h2>
+                               <h4 style="margin-top: 40px; font-size: 12px;">Total Appointments</h4>
+                            </div>
+                            <div class="col-md-3 cases">
+                               <h2 style="font-size:50px; margin-top:3px">{{d.Rating}}</h2>
+                               <h4 style="margin-top: 40px; font-size: 12px;">Customer Reviews</h4>
+                            </div>
+                            <div class="col-md-3 cases">
+                            </div>
+                         </div>
+                      </li>
+                   </ul>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-md-12">
+                   <table>
+                      <thead>
+                         <tr>
+                            <th>Email_ID</th>
+                            <th>Time</th>
+                            <th>Accept Or Reject</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         <tr *ngFor="let p of patdetails">
+                            <td>{{p.CEmail}}</td>
+                            <td>{{p.Time}}</td>
+                            <td>
+                               <button class="b1" (click)="done(p.CEmail,p.Time,p.Date)">
+                                  <mat-icon>done</mat-icon>
+                               </button>
+                               <button class="b2" (click)="cancel(p.CEmail,p.Time,p.Date)">
+                                  <mat-icon>close</mat-icon>
+                               </button>
+                            </td>
+                         </tr>
+                      </tbody>
+                   </table>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

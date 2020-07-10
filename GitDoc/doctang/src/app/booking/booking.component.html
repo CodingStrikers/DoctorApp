@@ -1,0 +1,44 @@
+    
+    <ul class="gg">
+        <li *ngFor="let s of arrdata">       
+    <mat-card tab-index="0" class="p">   
+            <mat-card-content style="overflow-y:auto ">
+            
+                <div class="row">
+                    <div class="col-2">
+                      <!-- <h4 style="font-weight: bold"> {{s.Image}}</h4><br> -->
+                      <img src="data:image/jpeg;base64,{{s.Image}}">
+                    </div>
+                    <div class="col-8">
+                      <h3 style="font-weight: bold;font-style:italic; margin-top: 60px; margin-left: 35px"> {{s.Name}}</h3>
+                    </div> 
+                    <div class="col-2">
+               <h4 style="font-weight: bold ; font-style:italic; margin-top: 60px"> ₹{{s.Fees}}</h4>
+                    </div>    
+                </div>   
+                   <h4 style="font-style:italic">{{s.Speciality}}</h4><br>
+                   <h4 style="font-weight: bold ; font-style:italic">Experience : {{s.Experience}} years</h4><br>
+                   <h4 style="font-weight: bold ; font-style:italic">Next Available at : {{s.Availability}}</h4><br>
+              
+                    <!-- {{(s.About).substr(0,200)}} <a [routerLink]="['/booking/profile']">...Read More</a> -->
+ 
+            </mat-card-content>
+            <mat-card-actions>
+                    <button class="w1" mat-button (click)="profile(s.ID,s.Speciality)">View-Profile</button>
+                     <button class="w2" mat-button (click)="appoint(s.ID)">Appointment</button> 
+            </mat-card-actions>
+    </mat-card> <br>
+        </li> 
+    </ul>
+
+
+    <!-- <mat-form-field class="example-full-width c2">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker></mat-datepicker>
+          </mat-form-field> -->
+
+ 
+
+    

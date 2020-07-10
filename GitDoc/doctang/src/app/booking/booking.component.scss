@@ -1,0 +1,53 @@
+.gg{
+    position:fixed;
+    margin-top: 200px;
+    background-color: white;
+    width:700px;
+    z-index:0;
+
+    // z-index: 999;
+    
+}
+::ng-deep .cdk-overlay-container mat-datepicker-content{
+    z-index:100000;
+    position: relative;
+  }
+
+ul {
+    list-style: none;
+    height: 700px;
+    overflow: auto;
+
+}
+
+.mat-card{
+    background-color:aliceblue;
+    margin-left:0px; 
+    width:100%;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+h4{
+    margin:0 0 -15px;
+}
+.mat-card .w1{
+    background-color: #3f729b !important;
+    color: white;
+    margin-right: -230px;
+    margin-left: 140px;
+    border: none;
+    text-transform: uppercase;
+}
+
+.mat-card .w2{
+    background-color: #3f729b !important;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+}
+
+.c2{
+    margin-left: 300px;
+}

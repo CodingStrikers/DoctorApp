@@ -1,0 +1,48 @@
+.app{
+    position: fixed;
+    margin-top:200px;
+    width:900px;
+    height:480px;
+    z-index: 0px;
+    background-color: white;
+}
+
+.mat-form-field{
+    margin-left: 120px;
+    font-size: 16px;
+}
+
+.a11{
+  margin-left:130px;
+  font-size:16px;
+  margin-bottom:15px;
+}
+
+.a12,.a13,.a14 {
+    margin-left: 130px;
+    font-size: 16px;
+    margin-bottom: 26px;
+}
+.c1{
+    padding-top:60px;
+}
+.c2{
+    padding-top: 100px;
+}
+textarea.mat-input-element {
+    padding: 2px 0;
+    width: 300px;
+    height: 100px;
+    background-color: aliceblue;
+    margin-top:12px;
+}
+
+.w1{
+    background-color: #3f729b !important;
+    color: white;
+    margin:8px 0px 0px 130px;
+    font-size:15px;
+    border: none;
+    padding:7px;
+    text-transform: uppercase;
+}
